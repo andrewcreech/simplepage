@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SimplePage</title>
+	<link rel="icon" href="favicon.ico">
+
+	<link href="http://fonts.googleapis.com/css?family=Roboto+Mono:400" rel="stylesheet">
+
+	<!--build:css css/styles.min.css-->
+	<link rel="stylesheet" href="css/styles.css">
+	<!--endbuild-->
+
+</head>
+<body>
+	<header>
+		<menu>
+			<button type="button" id="toggleFormButton" class="tooltip" alt="Toggle Menu" tooltip="Show/Hide Menu">
+				<img src="images/menu.svg">
+			</button>
+
+			<form id="addLink">
+				<input name="urlAddress" id="urlAddress" type="text" placeholder="www.example.com">
+				<input name="urlLabel" id="urlLabel" type="text" placeholder="Label">
+
+				<button id="addLinkSubmit" class="tooltip" type="button" tooltip="Add Bookmark">
+					<img src="images/plus.svg">
+				</button>
+
+				<button id="addLinkList" class="tooltip" type="button" alt="New Group" tooltip="New Group">
+					<img src="images/window.svg" alt="New Group">
+				</button>
+
+			</form>
+		</menu>
+	</header>
+
+	<main id="wrapper"></main>
+
+	<!--build:js js/main.min.js -->
+	<script src="js/lib/jquery.js"></script>
+	<script src="js/lib/jquery-ui.js"></script>
+	<script src="js/lib/firebase.js"></script>
+    <script src="js/main.js"></script>
+    <!-- endbuild -->
+</body>
+</html>

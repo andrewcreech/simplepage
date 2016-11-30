@@ -1,0 +1,183 @@
+/*///////////////////////////
+// SimplePage App Styles
+// Author: Andrew Creech 2015
+///////////////////////////*/
+
+* { margin: 0; padding: 0; }
+
+/* Variables ///////////
+//////////////////////*/
+$background-color: #eeeeee;
+$header-color: #555555;
+$primary-color: #52bad5;
+
+/* Classes //////////////////
+///////////////////////////*/
+.deleteGroup {
+	position: absolute;
+	top: -23px;
+	right: 5px;
+	float: right;
+  	height: 16px;
+  	width: 16px;
+}
+
+.deleteLink {
+	margin-left: 10px;
+	color: #bbbbbb;
+	cursor: pointer;
+}
+
+.linkItem img { margin-right: 5px; }
+
+.linkList {
+	position: absolute;
+	background-color: $background-color;
+	border: 1px solid rgba(0,0,0,0);
+	border-top: 30px solid rgba(0,0,0,0);
+	margin-left: 20px;
+	margin-top: 20px;
+	max-width: 275px;
+	min-width: 158px;
+	padding: 10px 0px;
+	float: left;
+}
+.linkList.showBorder:active { border-color: $primary-color; }
+
+.moveIcon {
+	position: absolute;
+	top: -23px;
+	left: 5px;
+	float: left;
+  	height: 16px;
+  	width: 16px;
+  	cursor: move;
+}
+
+.rotateRight {
+	-webkit-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+.showBorder { border-color: $header-color; }
+
+.tooltip { display: inline; position: relative; }
+.tooltip:hover:after {
+	content: attr(tooltip);
+	background: $primary-color;
+	width: 100px;
+   top: 56px;
+   color: $background-color;
+   left: 20%;
+   padding: 5px 15px;
+   position: absolute;
+   z-index: 98;
+}
+.tooltip:hover:before {
+   border: solid;
+  	border-color: $primary-color transparent;
+	border-width: 0 6px 6px 6px;
+	top: 50px;
+  	content: "";
+ 	left: 20px;
+  	position: absolute;
+  	z-index: 99;
+}
+
+/* ID's /////////////////////
+///////////////////////////*/
+#addLink { float: left; height: 50px; font-size: 0; }
+#addLink input[type=text]:focus { outline: 1px solid $primary-color; }
+
+#addLinkSubmit, #addLinkList {
+	width: 50px;
+	height: 50px;
+	padding: 13px;
+	background-color: $header-color;
+	cursor: pointer;
+	vertical-align: middle;
+	border: none;
+}
+#addLinkSubmit:focus, #addLinkList:focus { background-color: $primary-color; outline: none; }
+#addLinkSubmit:hover, #addLinkList:hover { background-color: $primary-color; }
+
+#toggleFormButton {
+	float: left;
+	background-color: #444444;
+	border: none;
+	cursor: pointer;
+	height: 50px;
+	width: 50px;
+	vertical-align: middle;
+}
+#toggleFormButton:hover { background-color: $primary-color; }
+#toggleFormButton:focus { outline: none; }
+#toggleFormButton img {	transition: all 300ms ease; }
+
+#urlAddress { width: 250px; }
+
+
+/* Elements /////////////////
+///////////////////////////*/
+a {
+	text-decoration: none;
+	padding: 5px 5px;
+	color: #000;
+	border: 1px solid rgba(0,0,0,0);
+	border-radius: 3px;
+}
+
+a:active {
+	background-color: #cccccc;
+	border: none;
+	border-bottom: 1px solid #ffffff;
+	box-shadow: inset 0 1px 2px 0 rgba(0,0,0,.6);
+}
+
+a:hover {
+	border: 1px solid #cccccc;
+	border-bottom: 1px solid rgba(0,0,0,.5);
+	box-shadow: 0 1px 0 0 rgba(0,0,0,.2),
+				inset 1px 1px 0 0 #ffffff,
+				inset -1px -1px 0 0 rgba(255,255,255,.6);
+}
+
+a:visited { color: #000000; }
+
+body {
+	background-color: $background-color;
+	font-family: 'Roboto Mono', helvetica;
+	font-weight: 400;
+	font-size: 12px;
+	margin: 0px;
+	padding: 0px;
+}
+
+header {
+	margin: 0px;
+	display: block;
+	height: 50px;
+	width: 100%;
+	background-color: $header-color;
+}
+
+input[name=urlAddress], input[name=urlLabel] {
+	border: none;
+	margin-left: 10px;
+	padding-left: 5px;
+	height: 30px;
+	vertical-align: middle;
+}
+
+li img { vertical-align: middle; }
+li { margin-bottom: 10px; }
+
+main {
+	float: left;
+	width: 100%;
+	height: 1020px;
+}
+
+ul { list-style-type: none; }
